@@ -149,11 +149,12 @@ async def start_command(message: types.Message, state: FSMContext):
                 InlineKeyboardButton(text="🎡 Рулетка в группе", callback_data="group_roulette_menu"),
                 InlineKeyboardButton(text="♠️ Black Jack в группе", callback_data="group_blackjack_menu"),
             ],
+            [InlineKeyboardButton(text="🎰 СЛОТЫ(НОВОЕ!)", callback_data="slots_menu")]
             [
                 InlineKeyboardButton(text="📊 Статистика", callback_data="stats"),
                 InlineKeyboardButton(text="💰 Баланс", callback_data="balance"),
             ],
-            [InlineKeyboardButton(text="🎰 СЛОТЫ", callback_data="slots_menu")]
+            
 
         ]
     )
@@ -280,7 +281,16 @@ async def slots_menu(callback: types.CallbackQuery, state: FSMContext):
             [
                 InlineKeyboardButton(text="5000 🪙", callback_data="slots_bet_5000"),
                 InlineKeyboardButton(text="10000 🪙", callback_data="slots_bet_10000"),
+                InlineKeyboardButton(text="20000 🪙", callback_data="slots_bet_20000"),
             ],
+            [
+            InlineKeyboardButton(text="50000 🪙", callback_data="slots_bet_50000"),
+            InlineKeyboardButton(text="100000 🪙", callback_data="slots_bet_100000"),
+        ],
+        [
+            InlineKeyboardButton(text="200000 🪙", callback_data="slots_bet_200000"),
+            InlineKeyboardButton(text="500000 🪙", callback_data="slots_bet_500000"),
+        ],
             [
                 InlineKeyboardButton(text="⬅️ Назад", callback_data="back_to_menu"),
             ],
@@ -372,15 +382,28 @@ async def slots_multiplier_menu(callback: types.CallbackQuery, state: FSMContext
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
             [
-                InlineKeyboardButton(text="10 🪙", callback_data="slots_mult_bet_10"),
-                InlineKeyboardButton(text="50 🪙", callback_data="slots_mult_bet_50"),
-                InlineKeyboardButton(text="100 🪙", callback_data="slots_mult_bet_100"),
-            ],
-            [
-                InlineKeyboardButton(text="250 🪙", callback_data="slots_mult_bet_250"),
-                InlineKeyboardButton(text="500 🪙", callback_data="slots_mult_bet_500"),
-                InlineKeyboardButton(text="1000 🪙", callback_data="slots_mult_bet_1000"),
-            ],
+            InlineKeyboardButton(text="10 🪙", callback_data="slots_mult_bet_10"),
+            InlineKeyboardButton(text="50 🪙", callback_data="slots_mult_bet_50"),
+            InlineKeyboardButton(text="100 🪙", callback_data="slots_mult_bet_100"),
+        ],
+        [
+            InlineKeyboardButton(text="250 🪙", callback_data="slots_mult_bet_250"),
+            InlineKeyboardButton(text="500 🪙", callback_data="slots_mult_bet_500"),
+            InlineKeyboardButton(text="1000 🪙", callback_data="slots_mult_bet_1000"),
+        ],
+        [
+            InlineKeyboardButton(text="5000 🪙", callback_data="slots_mult_bet_5000"),
+            InlineKeyboardButton(text="10000 🪙", callback_data="slots_mult_bet_10000"),
+            InlineKeyboardButton(text="20000 🪙", callback_data="slots_mult_bet_20000"),
+        ],
+        [
+            InlineKeyboardButton(text="50000 🪙", callback_data="slots_mult_bet_50000"),
+            InlineKeyboardButton(text="100000 🪙", callback_data="slots_mult_bet_100000"),
+        ],
+        [
+            InlineKeyboardButton(text="200000 🪙", callback_data="slots_mult_bet_200000"),
+            InlineKeyboardButton(text="500000 🪙", callback_data="slots_mult_bet_500000"),
+        ],
             [
                 InlineKeyboardButton(text="⬅️ Назад", callback_data="back_to_menu"),
             ],
@@ -486,14 +509,27 @@ async def slots_risk_menu(callback: types.CallbackQuery, state: FSMContext):
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
             [
-                InlineKeyboardButton(text="10 🪙", callback_data="slots_risk_bet_10"),
-                InlineKeyboardButton(text="50 🪙", callback_data="slots_risk_bet_50"),
-                InlineKeyboardButton(text="100 🪙", callback_data="slots_risk_bet_100"),
-            ],
-            [
-                InlineKeyboardButton(text="500 🪙", callback_data="slots_risk_bet_500"),
-                InlineKeyboardButton(text="1000 🪙", callback_data="slots_risk_bet_1000"),
-            ],
+            InlineKeyboardButton(text="10 🪙", callback_data="slots_risk_bet_10"),
+            InlineKeyboardButton(text="50 🪙", callback_data="slots_risk_bet_50"),
+            InlineKeyboardButton(text="100 🪙", callback_data="slots_risk_bet_100"),
+        ],
+        [
+            InlineKeyboardButton(text="500 🪙", callback_data="slots_risk_bet_500"),
+            InlineKeyboardButton(text="1000 🪙", callback_data="slots_risk_bet_1000"),
+            InlineKeyboardButton(text="5000 🪙", callback_data="slots_risk_bet_5000"),
+        ],
+        [
+            InlineKeyboardButton(text="10000 🪙", callback_data="slots_risk_bet_10000"),
+            InlineKeyboardButton(text="20000 🪙", callback_data="slots_risk_bet_20000"),
+        ],
+        [
+            InlineKeyboardButton(text="50000 🪙", callback_data="slots_risk_bet_50000"),
+            InlineKeyboardButton(text="100000 🪙", callback_data="slots_risk_bet_100000"),
+        ],
+        [
+            InlineKeyboardButton(text="200000 🪙", callback_data="slots_risk_bet_200000"),
+            InlineKeyboardButton(text="500000 🪙", callback_data="slots_risk_bet_500000"),
+        ],
             [
                 InlineKeyboardButton(text="⬅️ Назад", callback_data="back_to_menu"),
             ],
@@ -593,14 +629,28 @@ async def slots_gold_menu(callback: types.CallbackQuery, state: FSMContext):
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
             [
-                InlineKeyboardButton(text="25 🪙", callback_data="slots_gold_bet_25"),
-                InlineKeyboardButton(text="50 🪙", callback_data="slots_gold_bet_50"),
-                InlineKeyboardButton(text="100 🪙", callback_data="slots_gold_bet_100"),
-            ],
-            [
-                InlineKeyboardButton(text="250 🪙", callback_data="slots_gold_bet_250"),
-                InlineKeyboardButton(text="500 🪙", callback_data="slots_gold_bet_500"),
-            ],
+            InlineKeyboardButton(text="25 🪙", callback_data="slots_gold_bet_25"),
+            InlineKeyboardButton(text="50 🪙", callback_data="slots_gold_bet_50"),
+            InlineKeyboardButton(text="100 🪙", callback_data="slots_gold_bet_100"),
+        ],
+        [
+            InlineKeyboardButton(text="250 🪙", callback_data="slots_gold_bet_250"),
+            InlineKeyboardButton(text="500 🪙", callback_data="slots_gold_bet_500"),
+            InlineKeyboardButton(text="1000 🪙", callback_data="slots_gold_bet_1000"),
+        ],
+        [
+            InlineKeyboardButton(text="5000 🪙", callback_data="slots_gold_bet_5000"),
+            InlineKeyboardButton(text="10000 🪙", callback_data="slots_gold_bet_10000"),
+            InlineKeyboardButton(text="20000 🪙", callback_data="slots_gold_bet_20000"),
+        ],
+        [
+            InlineKeyboardButton(text="50000 🪙", callback_data="slots_gold_bet_50000"),
+            InlineKeyboardButton(text="100000 🪙", callback_data="slots_gold_bet_100000"),
+        ],
+        [
+            InlineKeyboardButton(text="200000 🪙", callback_data="slots_gold_bet_200000"),
+            InlineKeyboardButton(text="500000 🪙", callback_data="slots_gold_bet_500000"),
+        ],
             [
                 InlineKeyboardButton(text="⬅️ Назад", callback_data="back_to_menu"),
             ],
@@ -720,15 +770,29 @@ async def slots_free_menu(callback: types.CallbackQuery, state: FSMContext):
     
     keyboard = InlineKeyboardMarkup(
         inline_keyboard=[
-            [
-                InlineKeyboardButton(text="20 🪙", callback_data="slots_free_bet_20"),
-                InlineKeyboardButton(text="50 🪙", callback_data="slots_free_bet_50"),
-                InlineKeyboardButton(text="100 🪙", callback_data="slots_free_bet_100"),
-            ],
-            [
-                InlineKeyboardButton(text="250 🪙", callback_data="slots_free_bet_250"),
-                InlineKeyboardButton(text="500 🪙", callback_data="slots_free_bet_500"),
-            ],
+             [
+            InlineKeyboardButton(text="20 🪙", callback_data="slots_free_bet_20"),
+            InlineKeyboardButton(text="50 🪙", callback_data="slots_free_bet_50"),
+            InlineKeyboardButton(text="100 🪙", callback_data="slots_free_bet_100"),
+        ],
+        [
+            InlineKeyboardButton(text="250 🪙", callback_data="slots_free_bet_250"),
+            InlineKeyboardButton(text="500 🪙", callback_data="slots_free_bet_500"),
+            InlineKeyboardButton(text="1000 🪙", callback_data="slots_free_bet_1000"),
+        ],
+        [
+            InlineKeyboardButton(text="5000 🪙", callback_data="slots_free_bet_5000"),
+            InlineKeyboardButton(text="10000 🪙", callback_data="slots_free_bet_10000"),
+            InlineKeyboardButton(text="20000 🪙", callback_data="slots_free_bet_20000"),
+        ],
+        [
+            InlineKeyboardButton(text="50000 🪙", callback_data="slots_free_bet_50000"),
+            InlineKeyboardButton(text="100000 🪙", callback_data="slots_free_bet_100000"),
+        ],
+        [
+            InlineKeyboardButton(text="200000 🪙", callback_data="slots_free_bet_200000"),
+            InlineKeyboardButton(text="500000 🪙", callback_data="slots_free_bet_500000"),
+        ],
             [
                 InlineKeyboardButton(text="⬅️ Назад", callback_data="back_to_menu"),
             ],
@@ -863,6 +927,14 @@ async def roulette_menu(callback: types.CallbackQuery, state: FSMContext):
                 InlineKeyboardButton(text="10000 🪙", callback_data="roulette_bet_10000"),
                 InlineKeyboardButton(text="20000 🪙", callback_data="roulette_bet_20000"),
             ],
+            [
+    InlineKeyboardButton(text="50000 🪙", callback_data="roulette_bet_50000"),
+    InlineKeyboardButton(text="100000 🪙", callback_data="roulette_bet_100000"),
+],
+[
+    InlineKeyboardButton(text="200000 🪙", callback_data="roulette_bet_200000"),
+    InlineKeyboardButton(text="500000 🪙", callback_data="roulette_bet_500000"),
+],
             [
                 InlineKeyboardButton(text="⬅️ Назад", callback_data="back_to_menu"),
             ],
@@ -1386,6 +1458,14 @@ async def group_roulette_menu(callback: types.CallbackQuery, state: FSMContext):
                 InlineKeyboardButton(text="10000 🪙", callback_data="group_bet_10000"),
                 InlineKeyboardButton(text="20000 🪙", callback_data="group_bet_20000"),
             ],
+            [
+    InlineKeyboardButton(text="50000 🪙", callback_data="group_bet_50000"),
+    InlineKeyboardButton(text="100000 🪙", callback_data="group_bet_100000"),
+],
+[
+    InlineKeyboardButton(text="200000 🪙", callback_data="group_bet_200000"),
+    InlineKeyboardButton(text="500000 🪙", callback_data="group_bet_500000"),
+],
             [
                 InlineKeyboardButton(text="⬅️ Назад", callback_data="back_to_menu"),
             ],
@@ -1930,6 +2010,9 @@ async def back_to_menu(callback: types.CallbackQuery, state: FSMContext):
                 InlineKeyboardButton(text="🎡 Рулетка в группе", callback_data="group_roulette_menu"),
                 InlineKeyboardButton(text="♠️ Black Jack в группе", callback_data="group_blackjack_menu"),
             ],
+            [
+            InlineKeyboardButton(text="🎰 СЛОТЫ(НОВОЕ!)", callback_data="slots_menu"),
+        ],
             [
                 InlineKeyboardButton(text="📊 Статистика", callback_data="stats"),
                 InlineKeyboardButton(text="💰 Баланс", callback_data="balance"),
