@@ -149,7 +149,7 @@ async def start_command(message: types.Message, state: FSMContext):
                 InlineKeyboardButton(text="🎡 Рулетка в группе", callback_data="group_roulette_menu"),
                 InlineKeyboardButton(text="♠️ Black Jack в группе", callback_data="group_blackjack_menu"),
             ],
-            [InlineKeyboardButton(text="🎰 СЛОТЫ(НОВОЕ!)", callback_data="slots_menu")]
+            [InlineKeyboardButton(text="🎰 СЛОТЫ(НОВОЕ!)", callback_data="slots_menu")],
             [
                 InlineKeyboardButton(text="📊 Статистика", callback_data="stats"),
                 InlineKeyboardButton(text="💰 Баланс", callback_data="balance"),
