@@ -17,7 +17,7 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeybo
 from aiogram.fsm.storage.memory import MemoryStorage
 
 # =============== КОНФИГУРАЦИЯ ===============
-TOKEN = "8544075261:AAGetzEOJwrIiJn4bYF9CT1fvmt_iJXLuJQ"
+TOKEN = "8557763454:AAFUz9t1edq9r5mTppGttwWizkJiH-JGZVk"
 USERS_DATA_FILE = "users_data.json"
 
 bot = Bot(token=TOKEN)
